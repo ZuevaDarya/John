@@ -1,0 +1,330 @@
+@import "nullstyle.scss";
+@import url("https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap");
+
+//&display=swap&subset=cyrillic-ext
+//&display=swap - контролирует порядок загрузки шрифтов
+//&subset=cyrillic-ext - для сатйа с кириллицей
+
+$fontFamily: "Heebo";
+$minWidth: 320px;
+$maxWidth: 1152px;
+$maxWidthContainer: 856px;
+
+$color1: #21243d;
+$color2: #ff6464;
+$color3: #edf7fa;
+$color4: #00a8cc;
+
+.wrapper {
+    min-height: 100%;
+
+    display: grid;
+    grid-template: minmax(auto, 160px) 1fr minmax(auto, 182px) / 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    &__nav {
+        padding: 27px 150px 0 0;
+    }
+
+    &__link {
+        font-family: $fontFamily;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29.38px;
+        padding-right: 33px;
+        color: #000000;
+    }
+
+    &__link:last-child {
+        padding-right: 0;
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+
+    max-width: $maxWidthContainer;
+}
+
+.main {
+    grid-area: main;
+
+    &__content {
+        display: grid;
+        grid-template: auto minmax(auto, 396px) auto / 1fr;
+        grid-template-areas:
+            "hi"
+            "posts"
+            "works";
+    }
+
+    &__hi {
+        grid-area: hi;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-family: $fontFamily;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 60px;
+        margin: 40px 0;
+        width: 440px;
+        justify-content: right;
+        color: $color1;
+    }
+
+    &__text {
+        font-family: $fontFamily;
+        font-weight: 400;
+        font-size: 14px;
+        color: $color1;
+        line-height: 23.5px;
+        margin-bottom: 47px;
+        max-width: 497px;
+        text-align: justify;
+    }
+
+    &__button {
+        width: 208px;
+        height: 47px;
+        background-color: $color2;
+        text-align: center;
+        padding: 9px;
+        margin-bottom: 81px;
+    }
+
+    &__download {
+        font-family: $fontFamily;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29.38px;
+        color: #ffffff;
+    }
+
+    &__image {
+        margin: 43px 0 146px;
+
+        img {
+            top: 0;
+            left: 0;
+            width: 243px;
+            height: 243px;
+            object-fit: cover;
+        }
+    }
+
+    &__posts {
+        grid-area: posts;
+        background-color: $color3;
+    }
+
+    &__posts-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-family: $fontFamily;
+        font-size: 22px;
+        line-height: 60px;
+        color: $color1;
+        padding-left: 15px;
+    }
+
+    &__link {
+        font-family: $fontFamily;
+        color: $color4;
+        font-size: 16px;
+        line-height: 23px;
+        padding-right: 15px;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__posts-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__column {
+        max-width: 418px;
+        max-height: 295px;
+    }
+
+    &__works {
+        grid-area: works;
+    }
+
+    &__body {
+        display: grid;
+        grid-template: repeat(3, minmax(auto, 201px)) / minmax(auto, $maxWidthContainer);
+        gap: 31px;
+    }
+
+    &__card {
+        display: flex;
+        border-bottom: solid 2px #e5e5e5;
+    }
+}
+
+.column {
+    width: 418px;
+    height: 295px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin: 0 15px 0;
+
+    &__title {
+        font-family: $fontFamily;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 38px;
+        padding: 15px;
+    }
+
+    &__date {
+        display: flex;
+        gap: 15px;
+        padding-left: 15px;
+    }
+
+    &__num {
+        font-family: $fontFamily;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color1;
+    }
+
+    &__slesh {
+        font-family: $fontFamily;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color1;
+    }
+
+    &__text {
+        font-family: $fontFamily;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color1;
+    }
+
+    &__info {
+        font-family: $fontFamily;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23.5px;
+        padding: 15px;
+        color: $color1;
+        text-align: justify;
+    }
+}
+.card {
+    &__image {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-family: $fontFamily;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 44px;
+        color: $color1;
+        padding-left: 15px;
+    }
+
+    &__time {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    &__date {
+        font-family: $fontFamily;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 900;
+        color: #ffffff;
+
+        background-color: #142850;
+        border-radius: 16px;
+
+        margin-left: 15px;
+        padding: 5px;
+    }
+
+    &__link {
+        color: #8695a4;
+        font-family: $fontFamily;
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    &__text {
+        font-family: $fontFamily;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+
+        color: $color1;
+
+        padding: 15px 15px;
+        text-align: justify;
+    }
+}
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    &__content {
+        margin: 20px;
+    }
+
+    &__icon {
+        color: #21243d;
+        font-size: 30px;
+
+        margin: 10px;
+    }
+
+    &__text {
+        color: #21243d;
+        font-family: $fontFamily;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+    }
+}
