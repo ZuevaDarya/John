@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 100%;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(auto, 160px) 1fr minmax(auto, 182px);
+  -ms-grid-columns: 1fr;
+      grid-template: minmax(auto, 160px) 1fr minmax(auto, 182px)/1fr;
+      grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__nav {
+  padding: 27px 150px 0 0;
+}
+
+.header__link {
+  font-family: "Heebo";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29.38px;
+  padding-right: 33px;
+  color: #000000;
+}
+
+.header__link:last-child {
+  padding-right: 0;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 856px;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.main__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto minmax(auto, 396px) auto;
+  -ms-grid-columns: 1fr;
+      grid-template: auto minmax(auto, 396px) auto/1fr;
+      grid-template-areas: "hi" "posts" "works";
+}
+
+.main__hi {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hi;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__name {
+  font-family: "Heebo";
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 60px;
+  margin: 40px 0;
+  width: 440px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  color: #21243d;
+}
+
+.main__text {
+  font-family: "Heebo";
+  font-weight: 400;
+  font-size: 14px;
+  color: #21243d;
+  line-height: 23.5px;
+  margin-bottom: 47px;
+  max-width: 497px;
+  text-align: justify;
+}
+
+.main__button {
+  width: 208px;
+  height: 47px;
+  background-color: #ff6464;
+  text-align: center;
+  padding: 9px;
+  margin-bottom: 81px;
+}
+
+.main__download {
+  font-family: "Heebo";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29.38px;
+  color: #ffffff;
+}
+
+.main__image {
+  margin: 43px 0 146px;
+}
+
+.main__image img {
+  top: 0;
+  left: 0;
+  width: 243px;
+  height: 243px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__posts {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: posts;
+  background-color: #edf7fa;
+}
+
+.main__posts-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__title {
+  font-family: "Heebo";
+  font-size: 22px;
+  line-height: 60px;
+  color: #21243d;
+  padding-left: 15px;
+}
+
+.main__link {
+  font-family: "Heebo";
+  color: #00a8cc;
+  font-size: 16px;
+  line-height: 23px;
+  padding-right: 15px;
+}
+
+.main__link:hover {
+  text-decoration: underline;
+}
+
+.main__posts-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__column {
+  max-width: 418px;
+  max-height: 295px;
+}
+
+.main__works {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: works;
+}
+
+.main__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (minmax(auto, 201px))[3];
+  -ms-grid-columns: minmax(auto, 856px);
+      grid-template: repeat(3, minmax(auto, 201px))/minmax(auto, 856px);
+  gap: 31px;
+}
+
+.main__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 2px #e5e5e5;
+}
+
+.column {
+  width: 418px;
+  height: 295px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin: 0 15px 0;
+}
+
+.column__title {
+  font-family: "Heebo";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 38px;
+  padding: 15px;
+}
+
+.column__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  padding-left: 15px;
+}
+
+.column__num {
+  font-family: "Heebo";
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243d;
+}
+
+.column__slesh {
+  font-family: "Heebo";
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243d;
+}
+
+.column__text {
+  font-family: "Heebo";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243d;
+}
+
+.column__info {
+  font-family: "Heebo";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23.5px;
+  padding: 15px;
+  color: #21243d;
+  text-align: justify;
+}
+
+.card__image {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card__title {
+  font-family: "Heebo";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  color: #21243d;
+  padding-left: 15px;
+}
+
+.card__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__date {
+  font-family: "Heebo";
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #142850;
+  border-radius: 16px;
+  margin-left: 15px;
+  padding: 5px;
+}
+
+.card__link {
+  color: #8695a4;
+  font-family: "Heebo";
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.card__text {
+  font-family: "Heebo";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #21243d;
+  padding: 15px 15px;
+  text-align: justify;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__content {
+  margin: 20px;
+}
+
+.footer__icon {
+  color: #21243d;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.footer__text {
+  color: #21243d;
+  font-family: "Heebo";
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
